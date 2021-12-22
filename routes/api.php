@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('modalku', 'ModalkuCOntroller@modalkucallback');
+Route::post('testmodal', 'ModalkuController@olahCallback');
+Route::post('modalku', 'ModalkuController@modalkuTransaction');
+Route::post('callback', 'ModalkuController@getCallback');
